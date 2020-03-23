@@ -1,0 +1,42 @@
+<!-- ************************************************    PDD-NOTES    ******************************************************
+*
+* Date:                                             23 March 2020
+*
+* Programmer:                                       Joel Godinez
+*
+* Purpose/ Process description:                     Generate the Security Hash for each Client based on personal information
+*
+* Environment:                                      Windows 10
+*
+* Files Included:                                   ...
+*
+* Preconditions/Assumptions:                        ...
+*
+* Postconditions:                                   Attain client's security hash
+*
+* Process full name:                                Calculate Client Security Hash
+* 
+* Function:                                         Security
+*
+* Department:                                       Finance and Accounting
+*
+* Role required for performing this process:        System 1 User
+*
+* Process Schedule:                                 Daily
+*
+* # of item processes per day:                      7 - 15 clients
+*
+* Average handling time per item:                   2 min/client
+*
+* Peak period(s):                                   N/A
+*
+* # of FTE's supporting this activity:              1
+*
+* Level of exception rate:                          No expected exceptions
+*
+* Input data:                                       Client data
+*
+* Ouput data:                                       Client Security Hash
+*
+* Applicable algorithm:                             N/A
+-->         
