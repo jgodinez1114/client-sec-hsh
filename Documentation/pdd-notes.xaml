@@ -38,5 +38,21 @@
 *
 * Ouput data:                                       Client Security Hash
 *
-* Applicable algorithm:                             N/A
--->         
+* Applicable process flow:                          1. Start
+*                                                    2. Log in to ACME System 1
+*                                                    3. Access "Work items" from dashboard
+*                                                    4. Select an activity of type WI5
+*                                                    5. Copy client info from the details page
+*                                                    6. Open SHA1 webpage & enter the correct formula
+*                                                    7. Retrieve Client security hash from the website
+*                                                    8. Return to Work Item & open "Update Work Item" page
+*                                                    9. Set the status to Completed and the Security Hash as a comment
+*                                                    10. End                                                     
+*
+*     Estimates                             Actuals
+*
+*     Design:           1.5 hours           2 hours 
+*     Implementation:   8 hours               hours
+*     Testing:          2 hours               hours
+*
+**********************************************************************************************************************  -->         
