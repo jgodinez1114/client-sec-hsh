@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>950.4,1122.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>950.4,1082.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -62,9 +62,13 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
   <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Process title]&#xA;[Process description]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="930.4,1022.4" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -364,7 +368,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="524.8,1551.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="524.8,1595.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="sd:DataRow[]" Name="WIList" />
                                     </Sequence.Variables>
@@ -412,7 +416,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InvokeWorkflowFile>
-                                    <Sequence sap2010:Annotation.AnnotationText="* Use the sequences to log in, navigate, extract, and close the ACME System 1 web application. &#xD;&#xA;* import and bind all the arguments&#xD;&#xA;* filter items for WI5 type" DisplayName="Read Transaction Data" sap:VirtualizedContainerService.HintSize="483.2,684.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                    <Sequence sap2010:Annotation.AnnotationText="* Use the sequences to log in, navigate, extract, and close the ACME System 1 web application. &#xA;* import and bind all the arguments&#xA;* filter items for WI5 type" DisplayName="Read Transaction Data" sap:VirtualizedContainerService.HintSize="483.2,684.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -446,13 +450,18 @@
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
                                     </Sequence>
-                                    <Assign sap:VirtualizedContainerService.HintSize="483.2,60" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                    <Assign sap2010:Annotation.AnnotationText="Select only the Work Items of type WI5 and in 'Open' status" sap:VirtualizedContainerService.HintSize="483.2,104" sap2010:WorkflowViewState.IdRef="Assign_28">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="sd:DataRow[]">[WIList]</OutArgument>
                                       </Assign.To>
                                       <Assign.Value>
                                         <InArgument x:TypeArguments="sd:DataRow[]">[TransactionData.Select("Type='WI5' AND Status='Open'")]</InArgument>
                                       </Assign.Value>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                     </Assign>
                                   </Sequence>
                                 </If.Then>
